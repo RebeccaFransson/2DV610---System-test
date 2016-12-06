@@ -6,6 +6,7 @@ Stakeholder:
 * SDC: wants to know if the "My Web Server" fulfills their goals of an easy deploy java webserver that can be deployed on many different devices.
 ___
 ## Resoruces
+
 **Roles and responsibilities**
 * Test  lead
     * Has the responsibility of the test planning.
