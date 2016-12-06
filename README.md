@@ -5,6 +5,7 @@ This document if for our Product owner, SDC. SDC wants an easy to deploy java-we
 Stakeholder:
 * SDC: wants to know if the "My Web Server" fulfills their goals of an easy deploy java webserver that can be deployed on many different devices.
 ___
+
 ## Resoruces
 
 **Roles and responsibilities**
