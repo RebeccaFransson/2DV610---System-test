@@ -323,20 +323,48 @@ __Test steps__
 
 
 Primary flow
-1. Start web webserver with legal arguments.
-
+1. Administrator starts Webserver
+2. Webserver asked for port number and shared resource container
+3. Administrator provides a port number and a shared resource container
+4. Webserver stars on given port
 
 
 
 Alternative  flow
-1 a. Start webserver with illegal argument.
-    - The webserver does not start and throws an error.
-1 b. Start webserver with port that is already taken
-    - The webserver does not start and throws an error.
-1 c. Start webserver without any arguments.
-    - The webserver does not start and throws an error.
+2. a. Webserver does not asks for a port or a shared resource container.
+    - Webserver does not start without right arguments.
 
 
+2. b. Webserver only asks for a port
+     - Webserver does not start without right arguments.
+
+
+2. c Webserver only askes for a shared resource container
+    - Webserver does not start without right arguments.
+
+
+3. a. Administrator provides illegel port
+    - Server craches
+
+
+3. b. Administrator provides a port that is already in use
+    - Server craches
+
+
+3. c. Administrator does not provide any port at all
+    - Server craches
+
+
+3. d. Administrator provides a resource container that does not exist
+    - Server present an error message:  “No access to folder XX”
+
+
+3. e. Administrator does not provide a resource container
+    - Server craches
+
+
+4. a. Webserver does not start on given port
+    - Webserver does not start 
 
 
 __Expected results__
@@ -626,9 +654,9 @@ Primary flow
 
 Alternative flow
 2a. Nothing is written in the access log
-    - When a user opens the access log it's empty or not updated.
+    - The system provides an error message and when a user opens the access log it's empty or not updated. 
 2b. The access log is not created
-    - The user cannot find the access log
+    - The user cannot find the access log and the server present an error message
 3a. The access log is created in the wrong format
     - The user cannot open the access log in a text editor
 
@@ -797,7 +825,7 @@ Pre-conditions: Test case 0,
 
 
 
-__Description__
+__Description__  
 
 
 Check the HTTP 1.1 head method.
@@ -868,7 +896,7 @@ ___
 
 |Test case|Tc id|Status|OS|Date|
 |-|-|-|-|-|
-|Start server|0|passed|MacOS, Windows*, Linux|2016-12-12|
+|Start server|0|failed|MacOS, Windows*, Linux|2016-12-12|
 |High load 100*20|1|passed|MacOS, Windows*, Linux|2016-12-12|
 |High load 2000*20|1|failed|MacOS, Windows*, Linux|2016-12-12|
 |HTTP 1.1 Status 200|2|passed|MacOS, Windows*, Linux|2016-12-12|
@@ -879,12 +907,25 @@ ___
 |Access logs|6|failed|MacOS, Windows*, Linux|2016-12-12|
 |Request image|7|passed|MacOS, Windows*, Linux|2016-12-12|
 |Shutdown server|8|passed|MacOS, Windows*, Linux|2016-12-12|
+|HTTP 1.1 HEAD|10|failed|MacOS, Windows*, Linux|2016-12-13|
 
 
 *XP, Vista, 7, 8, 10, server 2008
 
 
 #### Test evaluation
+##### --Automated--
+__SocketClientTest__
+* Socket Client test failed beacuse it tried to connect to a server that is not online.
+To test if it was 'My webserver' was causing the problem the test executer changed the URL of the socket client test to a server that was online and responding. 
+This resulted in in a successful response but it was the wrong headers since the headers in the test were hard coded.
+From that the test executer concluted that the problem is not located in the 'My web server'.
+
+##### --Manual--
+__Start server, id: 0__
+* Webserver does not ask for a port or a resource container when administror starts the webserver.
+* When the adiminstror provides a legal and not in use port and legal resource container as program-argument s the server starts as expected.
+* When the adiminstror provides a resource container that does not exist the server does not present an error message.
 
 
 __High load, id 1__
@@ -894,21 +935,49 @@ __High load, id 1__
 * Served 2000 request for 20 times, 10134 timed out and failed
 
 
-__HTTP 1.1, id 2, 3, 4, 5, 9__
+__HTTP 1.1, id 2, 3, 4, 9__
 
 
 * Webserver does not fully support HTTP 1.1
 * All request methods is not implemented
-    * Get request for HEAD got a 404, should get 200
-    * When request to image-folder webserver throws an error that is not handled, should get status code of 403
+    * Request for HEAD should get 200
+    * Request for an image-folder should return 403
+    
 
+__HTTP 1.1, id 5__
+* When request to image-folder webserver throws an error that is not handled, should get status code of 403
 
 __Access log, id 6__
 * Access log is not written when a connection is made to the server
 
+__Request image, id 7__
+* Trying to request an image directly works as expected.
+
+__Shutdown server, id 8__
+* Stopping the server works as expected.
+
+__HTTP 1.1 HEAD, id 10__
+* When a request was made to the HEAD the server reponed with a statyus code of 405.
+This problem is not likey to cause any problem of the release of the server.
+
+## Summary
+After a executing all the tests on My Webserver the test team has concluded that the server does not fulfill all the requirements that SDC has provided.
+
+This choise has been made beacuse of serveral reasons.
+The My Web Server has too has many flaws. The system does not fulfill the requirments from SDC or its own use-cases. The problems in My Web Server is pretty easily fixed but there is too many of them and they would require too much work and maintenance.
+
+The webserver is not actively maintained and therefor if any problems occur the SDC will have to stand for the costs and work to fix it. There will not be any new features and the server will not get imporved unless the SDC choose to do that themselfs.
+
+The webserver could be easier to start, it does not go after the specified use-case for example. 
+
+Beacuse the webserver does not fully support HTTP 1.1 the webserver is not suited for any type of usage. There is a clearly requirement about HTTP 1.1 that is specified in the requirement specification that the server does not fulfill.
+
+The SDC specifies that the server should be realsed under GPL 2.0. My Web Server is now released under MIT. If the SDC wants to coninue to work on My Web Server they need to change it to GPL 2.0. To do that they need to contact the original developers.
 
 
+After some research the test team have found what they think might be a more sutiable solution, to SDCs needs. The web of things framework from the W3C or Hello Blinky from Microsoft is two of the recomended solutions.  
 
+---
 # References
 
 
@@ -918,6 +987,18 @@ __Access log, id 6__
 
 
 TODO: change 'user' in test case
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
