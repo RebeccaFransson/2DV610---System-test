@@ -39,13 +39,14 @@
 
 # Test strategy
 ### Purpose
-This document if for our Product owner, SDC. SDC wants an easy to deploy java-webserver. The test strategy is to make sure the webserver can be deployed on many different devices. SDC wants to attract attention of IOT(Internet of things)-developers. The end-customers wants an easy access and absolute security.
+
+The purpose of this document is to define a high level test strategy for the abandonware web server "My Web Server". The company SDC wants to attract the attention of IOT(Internet of things)-developers by releasing an easy to use, simple to deploy and no configuration web server that can be deployed to a wide range of devices. This document will provide a framework for estimating if it is worth taking over and maintaining "My Web Server" or if some other software should be pursued.
 
 
 
 
-Stakeholder:
-* SDC: wants to know if the "My Web Server" fulfills their goals of an easy deploy java webserver that can be deployed on many different devices.
+#### Stakeholders:
+* **SDC**: Wants to find out if "My Web Server" fulfills their requirements of being an easy to deploy web server working on a wide range of devices
 
 
 ___
@@ -55,7 +56,7 @@ ___
 
 
 **Roles and responsibilities**
-* Test  lead
+* Test lead
     * Has the responsibility of the test planning.
     * Makes sure the team has all the necessary resources to fulfill their responsibilities.
 * Test engineers x2
@@ -79,9 +80,9 @@ Four people working half time, 20 hours/week, calculates to 160 hours for all fo
 **Equipment**
 
 
-* Operating systems: Windows, linux, mac
-* Stress testing tool - jMeter
-* Chrome plugin Postman
+* Windows, Linux & mac - Operating systems.
+* jMeter - Stress testing tool.
+* Postman - Chrome plugin for making http-requests
 
 
 
@@ -90,9 +91,9 @@ Four people working half time, 20 hours/week, calculates to 160 hours for all fo
 
 
 The test computer must have the latest operating system and the following programs installed:
-* Java -v
-* Terminal
-* Text editor
+* Java
+* A command line interface
+* A text editor
 ___
 
 
@@ -109,7 +110,7 @@ ___
 
 | | | 
 |-|-|
-|__Test Objective__|Because of the requirement "Deploy on many devices" we'll test the webserver on three different operating systems.|
+|__Test Objective__|Make sure the web server works on all operating systems stated in the requirements|
 |__Technique__|Deploy My Web webserver on three different operation systems|
 |__Compleition criteria__|My Web webserver works the same on all the different operating systems|
 
@@ -121,7 +122,7 @@ ___
 
 | | | 
 |-|-|
-|__Test Objective__|Make sure that the webserver works on heavy load.|
+|__Test Objective__|Make sure that the webserver works under heavy load.|
 |__Technique__|Use jMeter to test the webserver under heavy load.|
 |__Compleition criteria__|The My Web webserver is still responsive in relative amount of time.|
 
@@ -146,7 +147,7 @@ ___
 | | | 
 |-|-|
 |__Test Objective__|Testing the system with the human mind to find the bugs that the automated tests failed to cover.|
-|__Technique__|The test executor will go through all the user cases.|
+|__Technique__|The test executor will go through all the test cases.|
 |__Compleition criteria__|The test executor will not find any abnormalities.|
 
 
@@ -1026,7 +1027,6 @@ After some research the test team have found what they think might be a more sut
 
 
 TODO: change 'user' in test case
-
 
 
 
