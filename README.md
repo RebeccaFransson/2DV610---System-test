@@ -3,8 +3,7 @@
     + [Purpose](#purpose)
   * [Resources](#resources)
   * [Strategy](#strategy)
-      - [Testing types](#testing-types)
-    + [Risks](#risks)
+ec    + [Risks](#risks)
     + [Project milestones](#project-milestones)
     + [Deliverables](#deliverables)
 - [Test plan](#test-plan)
@@ -55,16 +54,17 @@ ___
 ## Resources
 
 
-**Roles and responsibilities**
-* Test lead
-    * Has the responsibility of the test planning.
-    * Makes sure the team has all the necessary resources to fulfill their responsibilities.
-* Test engineers x2
-    * Has to understand what needs to be tested.
-    * Creates test cases from the test plan.
-* Test executor
-    * Has the responsibility to make sure that all the test will be executed.
-    * Reports defects on executed tests.
+**Roles and responsibilities**  
+
+* Test lead  
+    * Has the responsibility of the test planning.  
+    * Makes sure the team has all the necessary resources to fulfill their responsibilities.  
+* Test engineers x2  
+    * Has to understand what needs to be tested.  
+    * Creates test cases from the test plan.  
+* Test executor  
+    * Has the responsibility to make sure that all the test will be executed.  
+    * Reports defects on executed tests.  
 
 
 
@@ -187,9 +187,9 @@ ___
 **Security**
 
 
-All connections should be encrypted and over a secure line.
-No data should be leaked.
-Skills and talent in the team is not enough.
+All connections should be encrypted and over a secure line.  
+No data should be leaked.  
+Skills and talent in the team is not enough.  
 
 
 
@@ -205,7 +205,7 @@ The system should have an uptime of 99.9%.
 ### Project milestones
 
 
-Effort hours is combined for all members in the team.
+Effort hours is combined for all members in the team.  
 
 
 |Milestone task|Effort|Start Date|End Date|
@@ -280,10 +280,10 @@ The My Web webserver allows the users to easily deploy a Java webserver on a wid
 ### Goals
 
 
-SDC aims to redistribute this webserver on a wide range of Internet Of Things.
-SDC wants an easy deploy java-web-server that can be deploys on many different devices.
-IOT-developers want minimal configuration as well as easy integration and adaption of the web-server.
-End-customer wants easy access and absolute security.
+SDC aims to redistribute this webserver on a wide range of Internet Of Things.  
+SDC wants an easy deploy java-web-server that can be deploys on many different devices.  
+IOT-developers want minimal configuration as well as easy integration and adaption of the web-server.  
+End-customer wants easy access and absolute security.  
 
 
 
@@ -291,8 +291,8 @@ End-customer wants easy access and absolute security.
 ### Scope
 
 
-Unit Testing will be used to check that the functionality still works. 
-Manual Testing will be used to test the different scenarios in the use cases.
+Unit Testing will be used to check that the functionality still works.   
+Manual Testing will be used to test the different scenarios in the use cases.  
 
 
 
@@ -341,12 +341,12 @@ In the document "Web  Server, Requirements", all the requirements for the system
 ##### Start server
 
 
-id: __0__
-Requirement id: __3__
-Category: __Functional test__
-Test type: __Manual test__
-Executed and reported by: The Test executor
-Pre-conditions: (hyper link to test computer req)
+id: __0__  
+Requirement id: __3__  
+Category: __Functional test__  
+Test type: __Manual test__  
+Executed and reported by: The Test executor  
+Pre-conditions: (hyper link to test computer req)  
 
 
 
@@ -362,55 +362,55 @@ The webserver should always start on the operating systems in requirement 3.
 __Test steps__
 
 
-Primary flow
-1. Administrator starts Webserver
-2. Webserver asked for port number and shared resource container
-3. Administrator provides a port number and a shared resource container
-4. Webserver stars on given port
+Primary flow  
+1. Administrator starts Webserver  
+2. Webserver asked for port number and shared resource container  
+3. Administrator provides a port number and a shared resource container  
+4. Webserver stars on given port  
 
 
 
 Alternative  flow
-2. a. Webserver does not asks for a port or a shared resource container.
-    - Webserver does not start without right arguments.
+2. a. Webserver does not asks for a port or a shared resource container.  
+    - Webserver does not start without right arguments.  
 
 
-2. b. Webserver only asks for a port
-     - Webserver does not start without right arguments.
+2. b. Webserver only asks for a port  
+     - Webserver does not start without right arguments.  
 
 
-2. c Webserver only askes for a shared resource container
-    - Webserver does not start without right arguments.
+2. c Webserver only askes for a shared resource container  
+    - Webserver does not start without right arguments.  
 
 
-3. a. Administrator provides illegel port
-    - Server craches
+3. a. Administrator provides illegel port  
+    - Server craches  
 
 
-3. b. Administrator provides a port that is already in use
-    - Server craches
+3. b. Administrator provides a port that is already in use  
+    - Server craches  
 
 
-3. c. Administrator does not provide any port at all
-    - Server craches
+3. c. Administrator does not provide any port at all  
+    - Server craches  
 
 
-3. d. Administrator provides a resource container that does not exist
-    - Server present an error message:  “No access to folder XX”
+3. d. Administrator provides a resource container that does not exist  
+    - Server present an error message:  “No access to folder XX”  
 
 
-3. e. Administrator does not provide a resource container
-    - Server craches
+3. e. Administrator does not provide a resource container  
+    - Server craches  
 
 
-4. a. Webserver does not start on given port
-    - Webserver does not start 
+4. a. Webserver does not start on given port  
+    - Webserver does not start   
 
 
 __Expected results__
 
 
-The webserver starts without any problems.
+The webserver starts without any problems.  
 
 
 ___
@@ -421,12 +421,12 @@ ___
 ##### High load
 
 
-id: __1__
-Requirement id: __1__
-Category: __Non functional test__
-Test type: __Stess test__
-Executed and reported by: __The Test executor__
-Pre-conditions: Test case 0
+id: __1__  
+Requirement id: __1__  
+Category: __Non functional test__  
+Test type: __Stess test__  
+Executed and reported by: __The Test executor__  
+Pre-conditions: Test case 0  
 
 
 
@@ -434,7 +434,7 @@ Pre-conditions: Test case 0
 __Description__
 
 
-Server should work on heavy load. 100 connections 20 times.
+Server should work on heavy load. 100 connections 20 times.  
 
 
 
@@ -442,19 +442,19 @@ Server should work on heavy load. 100 connections 20 times.
 __Test steps__
 
 
-Primary flow
-Input: 100*20, 2000*20
-1.  The 'input amount' of connections is connecting to the server
-2.  The webserver is still responsive
+Primary flow  
+Input: 100*20, 2000*20  
+1.  The 'input amount' of connections is connecting to the server    
+2.  The webserver is still responsive    
 
 
 
 
-Alternative flow
-connector = User that wants to connect
-2.a The webserver is not responsive on the input amount
-    - The 'connector' has to wait a long time for a response
-    - The 'connector' gets an error message about the servers timeout
+Alternative flow  
+connector: User that wants to connect  
+2.a The webserver is not responsive on the input amount    
+    - The 'connector' has to wait a long time for a response    
+    - The 'connector' gets an error message about the servers timeout  
 
 
 
@@ -473,12 +473,12 @@ ___
 ##### HTTP 1.1 Status 200
 
 
-id: __2__
-Requirement id: __2, UC3__
-Category: __Functional test__
-Test type: __Manual test__
-Executed and reported by: The Test executor
-Pre-conditions: Test case 0,
+id: __2__  
+Requirement id: __2, UC3__  
+Category: __Functional test__  
+Test type: __Manual test__  
+Executed and reported by: The Test executor  
+Pre-conditions: Test case 0,  
 
 
 
@@ -486,7 +486,7 @@ Pre-conditions: Test case 0,
 __Description__
 
 
-The webserver are able to send a respond with HTML and a status code of 200.
+The webserver are able to send a respond with HTML and a status code of 200.  
 
 
 
@@ -494,17 +494,17 @@ The webserver are able to send a respond with HTML and a status code of 200.
 __Test steps__
 
 
-Primary flow
-1. The server gets a request to the start page
-2. The server responds with a status code 200 - OK
+Primary flow  
+1. The server gets a request to the start page  
+2. The server responds with a status code 200 - OK  
 
 
 
 
-Alternative flow
-2a. The server does not respond with any HMTL or 200 status code
-2b. The server reponds with a staus code 200 but not any HMTL
-2c. The server responds with HTML but not status code 200
+Alternative flow  
+2a. The server does not respond with any HMTL or 200 status code  
+2b. The server reponds with a staus code 200 but not any HMTL  
+2c. The server responds with HTML but not status code 200   
 
 
 
@@ -512,7 +512,7 @@ Alternative flow
 __Expected results__
 
 
-The server responds with  HTML and a response code of 200 from the server
+The server responds with  HTML and a response code of 200 from the server  
 ___
 
 
@@ -521,12 +521,12 @@ ___
 ##### HTTP 1.1 Status 404
 
 
-id: __3__
-Requirement id: __2, UC3__
-Category: __Functional test__
-Test type: __Manual test__
-Executed and reported by: The Test executor
-Pre-conditions: Test case 0,
+id: __3__  
+Requirement id: __2, UC3__  
+Category: __Functional test__  
+Test type: __Manual test__  
+Executed and reported by: The Test executor  
+Pre-conditions: Test case 0,  
 
 
 
@@ -534,7 +534,7 @@ Pre-conditions: Test case 0,
 __Description__
 
 
-The webserver is able to send a response with status code of 404.
+The webserver is able to send a response with status code of 404.  
 
 
 
@@ -542,15 +542,15 @@ The webserver is able to send a response with status code of 404.
 __Test steps__
 
 
-Primary flow
-1. The server gets a request to a page that does not exist
-2. The server responds with a status code 404 - NOT FOUND
+Primary flow  
+1. The server gets a request to a page that does not exist  
+2. The server responds with a status code 404 - NOT FOUND  
 
 
 
 
-Alternative flow
-2a. The server does not respond with any HTML or status code of 404.
+Alternative flow  
+2a. The server does not respond with any HTML or status code of 404.  
 
 
 
@@ -558,7 +558,7 @@ Alternative flow
 __Expected results__
 
 
-The server should respond with a staus code of 404.
+The server should respond with a staus code of 404.  
 
 
 ___
@@ -569,12 +569,12 @@ ___
 ##### HTTP 1.1 Status 400
 
 
-id: __4__
-Requirement id: __2, UC3__
-Category: __Functional test__
-Test type: __Manual test__
-Executed and reported by: The Test executor
-Pre-conditions: Test case 0,
+id: __4__  
+Requirement id: __2, UC3__  
+Category: __Functional test__  
+Test type: __Manual test__  
+Executed and reported by: The Test executor  
+Pre-conditions: Test case 0,  
 
 
 
@@ -582,7 +582,7 @@ Pre-conditions: Test case 0,
 __Description__
 
 
-The webserver are able to send a response with status code of 400.
+The webserver are able to send a response with status code of 400.  
 
 
 
@@ -590,15 +590,15 @@ The webserver are able to send a response with status code of 400.
 __Test steps__
 
 
-Primary flow
-1. The server gets a POST-request with invalid body-data
-2. The server responds with HTML and a staus code 400 - BAD REQUEST
+Primary flow  
+1. The server gets a POST-request with invalid body-data  
+2. The server responds with HTML and a staus code 400 - BAD REQUEST  
 
 
 
 
-Alternative flow
-2a. The server does not respond with any HTML or status code of 400.
+Alternative flow  
+2a. The server does not respond with any HTML or status code of 400.  
 
 
 
@@ -606,7 +606,7 @@ Alternative flow
 __Expected results__
 
 
-The server should respond with a staus code of 400.
+The server should respond with a staus code of 400.  
 
 
 ___
@@ -617,12 +617,12 @@ ___
 ##### HTTP 1.1 Status 403
 
 
-id: __5__
-Requirement id: __2, UC3__
-Category: __Functional test__
-Test type: __Manual test__
-Executed and reported by: The Test executor
-Pre-conditions: Test case 0,
+id: __5__  
+Requirement id: __2, UC3__  
+Category: __Functional test__  
+Test type: __Manual test__  
+Executed and reported by: The Test executor  
+Pre-conditions: Test case 0,  
 
 
 
@@ -630,7 +630,7 @@ Pre-conditions: Test case 0,
 __Description__
 
 
-The webserver are able to send a respond with HTML and specified status codes.
+The webserver are able to send a respond with HTML and specified status codes.  
 
 
 
@@ -638,15 +638,15 @@ The webserver are able to send a respond with HTML and specified status codes.
 __Test steps__
 
 
-Primary flow
-1. The server gets a request to a forbidden resource
-2. The server responds with HTML and a staus code 403 - FORBIDDEN
+Primary flow  
+1. The server gets a request to a forbidden resource  
+2. The server responds with HTML and a staus code 403 - FORBIDDEN  
 
 
 
 
-Alternative flow
-2a. The server does not respond with any HTML or status code of 403.
+Alternative flow  
+2a. The server does not respond with any HTML or status code of 403.  
 
 
 
@@ -654,7 +654,7 @@ Alternative flow
 __Expected results__
 
 
-The server should respond with a status code of 403.
+The server should respond with a status code of 403.  
 
 
 ___
@@ -665,12 +665,12 @@ ___
 ##### Access logs
 
 
-id: __6__
-Requirement id: __5__
-Category: __Non functional test__
-Test type: __Manual test__
-Executed and reported by: The Test executor
-Pre-conditions: 
+id: __6__  
+Requirement id: __5__  
+Category: __Non functional test__  
+Test type: __Manual test__  
+Executed and reported by: The Test executor  
+Pre-conditions:   
 
 
 
@@ -678,7 +678,7 @@ Pre-conditions:
 __Description__
 
 
-When a request with information is sent to the server, a note in the access logs is written about the sent request.
+When a request with information is sent to the server, a note in the access logs is written about the sent request.  
 
 
 
@@ -686,26 +686,26 @@ When a request with information is sent to the server, a note in the access logs
 __Test steps__
 
 
-Primary flow
-1. A request is sent to the server
-2. A note is written to the access log
-3. The access log is viewable in a text-editor
+Primary flow  
+1. A request is sent to the server  
+2. A note is written to the access log  
+3. The access log is viewable in a text-editor  
 
 
-Alternative flow
-2a. Nothing is written in the access log
-    - The system provides an error message and when a user opens the access log it's empty or not updated. 
-2b. The access log is not created
-    - The user cannot find the access log and the server present an error message
-3a. The access log is created in the wrong format
-    - The user cannot open the access log in a text editor
+Alternative flow  
+2a. Nothing is written in the access log  
+    - The system provides an error message and when a user opens the access log it's empty or not updated.   
+2b. The access log is not created  
+    - The user cannot find the access log and the server present an error message  
+3a. The access log is created in the wrong format  
+    - The user cannot open the access log in a text editor  
 
 
 __Expected results__
 
 
-All the request to the webserver are logged in the access log.
-The written notes will be viewable for the user in a text editor.
+All the request to the webserver are logged in the access log.  
+The written notes will be viewable for the user in a text editor.  
 
 ___
 
@@ -713,36 +713,36 @@ ___
 ##### Request image
 
 
-id: __7__
-Requirement id: __UC3__
-Category: __Functional test__
-Test type: __Manual test__
-Executed and reported by: The Test executor
-Pre-conditions: Test case 0,
+id: __7__  
+Requirement id: __UC3__  
+Category: __Functional test__  
+Test type: __Manual test__  
+Executed and reported by: The Test executor  
+Pre-conditions: Test case 0,  
 
 
 __Description__
 
 
-Server should be able to return a image upon a request.
+Server should be able to return a image upon a request.  
 
 
 __Test steps__
 
 
-Primary flow
-1. A request for an image is made.
-2. The webserver responses with an image.
+Primary flow  
+1. A request for an image is made.  
+2. The webserver responses with an image.  
 
-
-Alternative flow
-2.  a. The webserver does not respond with an image.
+  
+Alternative flow  
+2.  a. The webserver does not respond with an image.  
 
 
 __Expected results__
 
 
-The webserver responses with an image.
+The webserver responses with an image.  
 
 
 ___
@@ -752,12 +752,12 @@ ___
 ##### Shutdown server
 
 
-id: __8__
-Requirement id: __UC2__
-Category: __Functional test__
-Test type: __Manual test__
-Executed and reported by: The Test executor
-Pre-conditions: Test case 0,
+id: __8__  
+Requirement id: __UC2__  
+Category: __Functional test__  
+Test type: __Manual test__  
+Executed and reported by: The Test executor  
+Pre-conditions: Test case 0,  
 
 
 
@@ -765,7 +765,7 @@ Pre-conditions: Test case 0,
 __Description__
 
 
-An system administrator should be able to stop the server.
+An system administrator should be able to stop the server.  
 
 
 
@@ -773,15 +773,15 @@ An system administrator should be able to stop the server.
 __Test steps__
 
 
-Primary flow
-1. Administrator chooses to stop the server
-2. The webserver stops and presents a message
+Primary flow  
+1. Administrator chooses to stop the server  
+2. The webserver stops and presents a message  
 
 
 
 
-Alternative flow
-2. a. The webserver is still on
+Alternative flow  
+2. a. The webserver is still on  
 
 
 
@@ -790,7 +790,7 @@ Alternative flow
 
 
 
-2. a. The webserver does not present a message
+2. a. The webserver does not present a message  
 
 
 
@@ -798,7 +798,7 @@ Alternative flow
 __Expected results__
 
 
-The webserver stops and presents a message about that the webserver has been stopped.
+The webserver stops and presents a message about that the webserver has been stopped.  
 
 
 ___
@@ -809,12 +809,12 @@ ___
 ##### HTTP 1.1 Status 405
 
 
-id: __9__
-Requirement id: __2, UC3__
-Category: __Functional test__
-Test type: __Manual test__
-Executed and reported by: The Test executor
-Pre-conditions: Test case 0,
+id: __9__  
+Requirement id: __2, UC3__  
+Category: __Functional test__  
+Test type: __Manual test__  
+Executed and reported by: The Test executor  
+Pre-conditions: Test case 0,  
 
 
 
@@ -822,7 +822,7 @@ Pre-conditions: Test case 0,
 __Description__
 
 
-The webserver are able to send a response with status code of 405.
+The webserver are able to send a response with status code of 405.  
 
 
 
@@ -830,9 +830,9 @@ The webserver are able to send a response with status code of 405.
 __Test steps__
 
 
-Primary flow
-1. The server gets a POST-request to the root
-2. The server responds with HTML and a status of code 405 - POST NOT SUPPORTED
+Primary flow  
+1. The server gets a POST-request to the root  
+2. The server responds with HTML and a status of code 405 - POST NOT SUPPORTED  
 
 
 
@@ -846,7 +846,7 @@ Alternative flow
 __Expected results__
 
 
-The server should respond with a status code of 405.
+The server should respond with a status code of 405.  
 
 
 ___
@@ -855,12 +855,12 @@ ___
 ##### HTTP 1.1 HEAD
 
 
-id: __10__
-Requirement id: __2, UC3__
-Category: __Functional test__
-Test type: __Manual test__
-Executed and reported by: The Test executor
-Pre-conditions: Test case 0,
+id: __10__  
+Requirement id: __2, UC3__  
+Category: __Functional test__  
+Test type: __Manual test__  
+Executed and reported by: The Test executor  
+Pre-conditions: Test case 0,  
 
 
 
@@ -868,7 +868,7 @@ Pre-conditions: Test case 0,
 __Description__  
 
 
-Check the HTTP 1.1 head method.
+Check the HTTP 1.1 head method.  
 
 
 
@@ -876,15 +876,15 @@ Check the HTTP 1.1 head method.
 __Test steps__
 
 
-Primary flow
-1. Send HEAD request to the webservers root.
-2. Webserver responds with 200 - OK
+Primary flow  
+1. Send HEAD request to the webservers root.  
+2. Webserver responds with 200 - OK  
 
 
 
 
-Alternative flow
-2. a. Webserver responds with another status code.
+Alternative flow  
+2. a. Webserver responds with another status code.  
 
 
 
@@ -892,7 +892,7 @@ Alternative flow
 __Expected results__
 
 
-Server should respond with a code of 200.
+Server should respond with a code of 200.  
 
 
 ___
@@ -900,9 +900,9 @@ ___
 
 
 
-# Test report
-### Test results
-#### Automated tests
+# Test report  
+### Test results  
+#### Automated tests  
 
 
 |Test|Status|OS|Date|
@@ -957,7 +957,7 @@ ___
 ##### --Automated--
 __SocketClientTest__
 * Socket Client test failed beacuse it tried to connect to a server that is not online.
-To test if it was 'My webserver' was causing the problem the test executer changed the URL of the socket client test to a server that was online and responding. 
+To test if it was 'My webserver' was causing the problem the test executer changed the URL of the socket client test to a server that was online and responding.
 This resulted in in a successful response but it was the wrong headers since the headers in the test were hard coded.
 From that the test executer concluted that the problem is not located in the 'My web server'.
 
