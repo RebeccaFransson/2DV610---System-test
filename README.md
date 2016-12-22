@@ -61,7 +61,7 @@ ___
     * Makes sure the team has all the necessary resources to fulfill their responsibilities.
 * Test engineers x2
     * Has to understand what needs to be tested.
-    * Creates test cases from the test plan
+    * Creates test cases from the test plan.
 * Test executor
     * Has the responsibility to make sure that all the test will be executed.
     * Reports defects on executed tests.
@@ -80,7 +80,7 @@ Four people working half time, 20 hours/week, calculates to 160 hours for all fo
 **Equipment**
 
 
-* Windows, Linux & mac - Operating systems.
+* Windows, Linux & Mac - Operating systems.
 * jMeter - Stress testing tool.
 * Postman - Chrome plugin for making http-requests
 
@@ -495,16 +495,16 @@ __Test steps__
 
 
 Primary flow
-1. User sends a request to the start page of the server
-2. User gets a status code 200 - OK
+1. The server gets a request to the start page
+2. The server responds with a status code 200 - OK
 
 
 
 
 Alternative flow
-2a. User does not get any HMTL or 200 status code
-2b. User gets 200 but not any HMTL
-2c. User gets HTML but not status code 200
+2a. The server does not respond with any HMTL or 200 status code
+2b. The server reponds with a staus code 200 but not any HMTL
+2c. The server responds with HTML but not status code 200
 
 
 
@@ -512,7 +512,7 @@ Alternative flow
 __Expected results__
 
 
-User gets HTML and a response code of 200 from the server
+The server responds with  HTML and a response code of 200 from the server
 ___
 
 
@@ -534,7 +534,7 @@ Pre-conditions: Test case 0,
 __Description__
 
 
-The webserver are able to send a response with status code of 404.
+The webserver is able to send a response with status code of 404.
 
 
 
@@ -543,14 +543,14 @@ __Test steps__
 
 
 Primary flow
-1. User sends a request to a page that does not exist
-2. User gets a response code 404 - NOT FOUND
+1. The server gets a request to a page that does not exist
+2. The server responds with a status code 404 - NOT FOUND
 
 
 
 
 Alternative flow
-2a. User does not get any HTML and status code of 404.
+2a. The server does not respond with any HTML or status code of 404.
 
 
 
@@ -558,7 +558,7 @@ Alternative flow
 __Expected results__
 
 
-User should get a response code of 404
+The server should respond with a staus code of 404.
 
 
 ___
@@ -591,14 +591,14 @@ __Test steps__
 
 
 Primary flow
-1. User sends a POST-request with invalid body-data to the server
-2. User gets HTML and response code 400 - BAD REQUEST
+1. The server gets a POST-request with invalid body-data
+2. The server responds with HTML and a staus code 400 - BAD REQUEST
 
 
 
 
 Alternative flow
-2a. User does not get any HTML and status code of 400.
+2a. The server does not respond with any HTML or status code of 400.
 
 
 
@@ -606,7 +606,7 @@ Alternative flow
 __Expected results__
 
 
-User should get a response code of 400
+The server should respond with a staus code of 400.
 
 
 ___
@@ -639,14 +639,14 @@ __Test steps__
 
 
 Primary flow
-1. User sends a request to a forbidden resource on the server
-2. User gets HTML and response code 403 - FORBIDDEN
+1. The server gets a request to a forbidden resource
+2. The server responds with HTML and a staus code 403 - FORBIDDEN
 
 
 
 
 Alternative flow
-2a. User does not get any HTML and status code of 403.
+2a. The server does not respond with any HTML or status code of 403.
 
 
 
@@ -654,7 +654,7 @@ Alternative flow
 __Expected results__
 
 
-User should get a response code of 403
+The server should respond with a status code of 403.
 
 
 ___
@@ -831,14 +831,14 @@ __Test steps__
 
 
 Primary flow
-1. User sends a POST-request to the root
-2. User gets HTML and response code 405 - POST NOT SUPPORTED
+1. The server gets a POST-request to the root
+2. The server responds with HTML and a status of code 405 - POST NOT SUPPORTED
 
 
 
 
 Alternative flow
-2. a. User does not get any HTML and status code of 405.
+2. a. The server does not respond with any HTML or status code of 405.
 
 
 
@@ -846,7 +846,7 @@ Alternative flow
 __Expected results__
 
 
-User should get a response code of 405.
+The server should respond with a status code of 405.
 
 
 ___
@@ -1022,23 +1022,3 @@ After some research the test team have found what they think might be a more sut
 
 
 [Web  Server, Requirements](https://docs.google.com/document/d/1fgQngHIZ4_aGIeB2S9YOBCghcBN9EEKBiaN-71MbGac/edit#heading=h.asfyqmcdgxbh)
-
-
-
-
-TODO: change 'user' in test case
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
